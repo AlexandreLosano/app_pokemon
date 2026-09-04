@@ -31,21 +31,9 @@ Dentro da pasta que você extraiu, dê **duplo-clique** no arquivo **`index.html
 
 Pronto! Explore as gerações, veja detalhes dos Pokémon e monte seu time. Para fechar, é só fechar a aba do navegador.
 
-> **Não carregou os Pokémon?** Isso pode acontecer em alguns navegadores mais restritivos (ex: Firefox) ao abrir o arquivo diretamente. Nesse caso, tente abrir com o Chrome/Edge, ou use o modo com servidor descrito na seção abaixo.
+> **Não carregou os Pokémon?** Isso pode acontecer em alguns navegadores mais restritivos (ex: Firefox) ao abrir o arquivo diretamente. Nesse caso, tente abrir com o Chrome/Edge/Brave/Opera.
 
 ---
-
-## 🚀 Como rodar (modo manual / desenvolvedores)
-
-O jeito mais simples é abrir `index.html` direto no navegador — não há build step nem servidor obrigatório.
-
-Se preferir servir os arquivos (por exemplo, para evitar particularidades de CORS em navegadores mais restritivos como o Firefox), há um servidor estático incluso, sem dependências externas:
-
-```bash
-python3 server.py
-```
-
-Depois acesse **http://localhost:1989**
 
 ## 🗂️ Estrutura
 
@@ -63,13 +51,11 @@ app_pokemon/
 │   ├── list.js          # listagem/filtragem de Pokémon
 │   ├── home.js           # tela inicial com gerações e jogos
 │   └── main.js          # ponto de entrada da aplicação
-└── server.py            # servidor estático (Python, porta 1989)
 ```
 
 ## 🧰 Stack
 
-- Frontend 100% estático: HTML, CSS e JS vanilla (sem framework, sem npm)
-- Servidor (opcional): Python 3 (`http.server`)
+- Frontend 100% estático: HTML, CSS e JS vanilla (sem framework, sem npm, sem servidor)
 - Dados: [PokéAPI](https://pokeapi.co/) — gratuita, sem cadastro, CORS habilitado
 
 Mais detalhes de arquitetura e convenções em [CLAUDE.md](./CLAUDE.md).

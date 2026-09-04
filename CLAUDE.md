@@ -1,18 +1,13 @@
 # Pokemon Explorer — Guia de Desenvolvimento
 
 ## Stack
-- **Frontend:** HTML + CSS + JavaScript vanilla (sem framework, sem build step)
-- **Servidor (opcional):** Python 3 — `http.server` built-in (sem dependências externas)
+- **Frontend:** HTML + CSS + JavaScript vanilla (sem framework, sem build step, sem servidor)
 - **API:** [PokéAPI](https://pokeapi.co/) — gratuita, sem cadastro, CORS habilitado (`Access-Control-Allow-Origin: *`, funciona até por `file://`)
 
 ## Como rodar
-Modo mais simples — zero instalação — é abrir `index.html` direto no navegador (duplo-clique). A PokéAPI libera CORS para qualquer origem, então o `fetch()` funciona normalmente mesmo via `file://` em navegadores Chromium (Chrome/Edge/Brave). Isso é o método de distribuição recomendado para usuários finais (ver README).
+Duplo-clique em `index.html` — abre direto no navegador, zero instalação. A PokéAPI libera CORS para qualquer origem, então o `fetch()` funciona normalmente mesmo via `file://` (testado e confirmado em navegadores Chromium: Chrome/Edge/Brave). Esse é o único modo de uso, inclusive para distribuição a usuários finais (ver README).
 
-Alternativa via servidor (útil se algum navegador restringir `fetch` a partir de `file://`, ex. Firefox em certas configurações):
-```bash
-python3 server.py
-```
-Acesse em `http://localhost:1989`
+Não há servidor no projeto — não reintroduzir um sem necessidade real.
 
 ## Regras
 
@@ -37,7 +32,6 @@ app_pokemon/
 │   ├── list.js         ← onGenChange(), onGameChange(), renderList(), pokeItemHTML()
 │   ├── home.js         ← showHome(), gameTitle(), selectGame(), renderGameGrid()
 │   └── main.js         ← init() — ponto de entrada, popula dropdowns, chama showHome()
-├── server.py           ← servidor Python na porta 1989
 └── CLAUDE.md
 ```
 
