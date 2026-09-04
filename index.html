@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokemon Explorer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <button class="home-btn" onclick="showHome()" title="Início">
+    <svg width="34" height="34" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="white" stroke="#30363d" stroke-width="4"/>
+      <path d="M4 50 H96" stroke="#30363d" stroke-width="5"/>
+      <path d="M4 50 Q4 4 50 4 Q96 4 96 50 Z" fill="#e63946"/>
+      <circle cx="50" cy="50" r="15" fill="white" stroke="#30363d" stroke-width="6"/>
+      <circle cx="50" cy="50" r="7" fill="#e6edf3"/>
+    </svg>
+  </button>
+  <h1>Pokemon Explorer</h1>
+  <span class="api-tag">PokéAPI — gratuito, sem cadastro</span>
+</header>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="selectors">
+      <div class="field">
+        <label>Geração</label>
+        <select id="sel-gen">
+          <option value="">Selecione a geração...</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Jogo</label>
+        <select id="sel-game" disabled>
+          <option value="">Todos os jogos</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Buscar Pokémon</label>
+        <input type="text" id="inp-search" placeholder="Buscar qualquer Pokémon...">
+      </div>
+    </div>
+    <div class="list-header" id="list-header">
+      Pokémon <span id="list-count" style="font-weight:400;opacity:.6"></span>
+    </div>
+    <div class="poke-list" id="poke-list">
+      <div class="empty-msg" id="init-msg" style="margin-top:20px">Carregando...</div>
+    </div>
+
+    <div class="team-bar">
+      <div class="team-bar-top">
+        <span class="team-bar-label">
+          Meu Time
+          <span class="team-count-badge" id="team-badge">0/6</span>
+        </span>
+        <button class="team-ver-btn" id="team-ver-btn" onclick="showTeamView()" disabled>Ver →</button>
+      </div>
+      <div class="team-slots" id="team-slots"></div>
+    </div>
+  </aside>
+
+  <main class="content" id="content">
+    <div class="placeholder">
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="46" fill="white" stroke="#30363d" stroke-width="4"/>
+        <path d="M4 50 H96" stroke="#30363d" stroke-width="5"/>
+        <path d="M4 50 Q4 4 50 4 Q96 4 96 50 Z" fill="#e63946"/>
+        <circle cx="50" cy="50" r="15" fill="white" stroke="#30363d" stroke-width="6"/>
+      </svg>
+      <p>Selecione um Pokémon para ver seus detalhes</p>
+    </div>
+  </main>
+</div>
+
+<script src="js/constants.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/api.js"></script>
+<script src="js/effectiveness.js"></script>
+<script src="js/pokemon.js"></script>
+<script src="js/team.js"></script>
+<script src="js/list.js"></script>
+<script src="js/home.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
