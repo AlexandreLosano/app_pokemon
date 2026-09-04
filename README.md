@@ -15,7 +15,7 @@ Explorador de Pokémon feito em **HTML + CSS + JavaScript vanilla**, sem framewo
 
 ## 📥 Nunca programou? Comece aqui
 
-Não precisa instalar nada complicado nem entender de programação. Siga os passos abaixo:
+**Não precisa instalar absolutamente nada** — nem Python, nem Node, nada. Só um navegador (Chrome, Edge, Brave ou Opera).
 
 ### Passo 1 — Baixar o projeto
 
@@ -23,16 +23,20 @@ Não precisa instalar nada complicado nem entender de programação. Siga os pas
 2. Clique em **"Download ZIP"**
 3. Extraia (descompacte) o arquivo ZIP baixado em uma pasta no seu computador
 
-### Passo 2 — Instalar o Python (só na primeira vez)
+### Passo 2 — Abrir o app
 
-O app precisa do **Python**, um programa gratuito, para funcionar. Se você não tem certeza se já tem, pode pular para o Passo 3 — os scripts avisam se faltar algo.
+Dentro da pasta que você extraiu, dê **duplo-clique** no arquivo **`index.html`**. Ele abre direto no seu navegador padrão e já funciona — não aparece nenhum terminal, nenhuma instalação, nada para configurar.
 
-- Baixe em **https://www.python.org/downloads/**
-- **Importante no Windows:** na tela de instalação, marque a caixinha **"Add Python to PATH"** antes de clicar em instalar
+### Passo 3 — Usar
 
-### Passo 3 — Abrir o app
+Pronto! Explore as gerações, veja detalhes dos Pokémon e monte seu time. Para fechar, é só fechar a aba do navegador.
 
-Dentro da pasta que você extraiu, dê **duplo-clique** no arquivo correspondente ao seu sistema:
+> **Não carregou os Pokémon?** Isso pode acontecer em alguns navegadores mais restritivos (ex: Firefox) ao abrir o arquivo diretamente. Nesse caso, use um dos scripts de apoio abaixo — eles resolvem o problema automaticamente.
+
+<details>
+<summary><strong>Alternativa: se o Passo 2 não funcionar no seu navegador</strong></summary>
+
+Dê duplo-clique no arquivo correspondente ao seu sistema (isso exige ter o [Python](https://www.python.org/downloads/) instalado — no Windows, marque **"Add Python to PATH"** durante a instalação):
 
 | Sistema | Arquivo |
 |---|---|
@@ -40,21 +44,21 @@ Dentro da pasta que você extraiu, dê **duplo-clique** no arquivo correspondent
 | 🍎 Mac | `Iniciar - Mac.command` |
 | 🐧 Linux | `Iniciar - Linux.sh` |
 
-Uma janela preta (terminal) vai abrir e, em seguida, o app abre sozinho no seu navegador. **Deixe essa janela aberta** enquanto estiver usando o Pokémon Explorer — fechá-la encerra o app.
+Uma janela de terminal abre e o app é aberto sozinho no navegador. **Deixe essa janela aberta** enquanto estiver usando o app — fechá-la encerra o app.
 
-> **Mac:** se aparecer um aviso de segurança ("não é possível verificar o desenvolvedor"), clique com o botão direito no arquivo → **Abrir** → confirme.
+> **Mac:** se aparecer aviso de segurança ("não é possível verificar o desenvolvedor"), clique com o botão direito no arquivo → **Abrir** → confirme.
 >
-> **Linux:** se o duplo-clique não funcionar, dê permissão de execução: botão direito no arquivo → Propriedades → Permissões → "Permitir executar como programa", ou rode `chmod +x "Iniciar - Linux.sh"` no terminal.
+> **Linux:** se o duplo-clique não funcionar, dê permissão de execução: botão direito → Propriedades → Permissões → "Permitir executar como programa", ou rode `chmod +x "Iniciar - Linux.sh"` no terminal.
 
-### Passo 4 — Usar
-
-Pronto! Explore as gerações, veja detalhes dos Pokémon e monte seu time. Para fechar o app, é só fechar a janela do terminal.
+</details>
 
 ---
 
 ## 🚀 Como rodar (modo manual / desenvolvedores)
 
-Não há dependências para instalar — é só subir o servidor estático incluso:
+O jeito mais simples é abrir `index.html` direto no navegador — não há build step nem servidor obrigatório.
+
+Se preferir servir os arquivos (por exemplo, para evitar particularidades de CORS em navegadores mais restritivos como o Firefox), há um servidor estático incluso, sem dependências externas:
 
 ```bash
 python3 server.py

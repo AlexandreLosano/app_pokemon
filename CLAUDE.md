@@ -2,10 +2,13 @@
 
 ## Stack
 - **Frontend:** HTML + CSS + JavaScript vanilla (sem framework, sem build step)
-- **Servidor:** Python 3 — `http.server` built-in (sem dependências externas)
-- **API:** [PokéAPI](https://pokeapi.co/) — gratuita, sem cadastro, CORS habilitado
+- **Servidor (opcional):** Python 3 — `http.server` built-in (sem dependências externas)
+- **API:** [PokéAPI](https://pokeapi.co/) — gratuita, sem cadastro, CORS habilitado (`Access-Control-Allow-Origin: *`, funciona até por `file://`)
 
 ## Como rodar
+Modo mais simples — zero instalação — é abrir `index.html` direto no navegador (duplo-clique). A PokéAPI libera CORS para qualquer origem, então o `fetch()` funciona normalmente mesmo via `file://` em navegadores Chromium (Chrome/Edge/Brave). Isso é o método de distribuição recomendado para usuários finais (ver README).
+
+Alternativa via servidor (útil se algum navegador restringir `fetch` a partir de `file://`, ex. Firefox em certas configurações):
 ```bash
 python3 server.py
 ```
