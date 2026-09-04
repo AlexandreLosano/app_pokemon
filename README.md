@@ -31,26 +31,7 @@ Dentro da pasta que você extraiu, dê **duplo-clique** no arquivo **`index.html
 
 Pronto! Explore as gerações, veja detalhes dos Pokémon e monte seu time. Para fechar, é só fechar a aba do navegador.
 
-> **Não carregou os Pokémon?** Isso pode acontecer em alguns navegadores mais restritivos (ex: Firefox) ao abrir o arquivo diretamente. Nesse caso, use um dos scripts de apoio abaixo — eles resolvem o problema automaticamente.
-
-<details>
-<summary><strong>Alternativa: se o Passo 2 não funcionar no seu navegador</strong></summary>
-
-Dê duplo-clique no arquivo correspondente ao seu sistema (isso exige ter o [Python](https://www.python.org/downloads/) instalado — no Windows, marque **"Add Python to PATH"** durante a instalação):
-
-| Sistema | Arquivo |
-|---|---|
-| 🪟 Windows | `Iniciar - Windows.bat` |
-| 🍎 Mac | `Iniciar - Mac.command` |
-| 🐧 Linux | `Iniciar - Linux.sh` |
-
-Uma janela de terminal abre e o app é aberto sozinho no navegador. **Deixe essa janela aberta** enquanto estiver usando o app — fechá-la encerra o app.
-
-> **Mac:** se aparecer aviso de segurança ("não é possível verificar o desenvolvedor"), clique com o botão direito no arquivo → **Abrir** → confirme.
->
-> **Linux:** se o duplo-clique não funcionar, dê permissão de execução: botão direito → Propriedades → Permissões → "Permitir executar como programa", ou rode `chmod +x "Iniciar - Linux.sh"` no terminal.
-
-</details>
+> **Não carregou os Pokémon?** Isso pode acontecer em alguns navegadores mais restritivos (ex: Firefox) ao abrir o arquivo diretamente. Nesse caso, tente abrir com o Chrome/Edge, ou use o modo com servidor descrito na seção abaixo.
 
 ---
 
@@ -72,9 +53,6 @@ Depois acesse **http://localhost:1989**
 app_pokemon/
 ├── index.html          # estrutura HTML
 ├── style.css           # estilos
-├── Iniciar - Windows.bat # atalho de um clique (Windows)
-├── Iniciar - Mac.command # atalho de um clique (Mac)
-├── Iniciar - Linux.sh    # atalho de um clique (Linux)
 ├── js/
 │   ├── constants.js    # URLs da API, cores de tipos, estado global
 │   ├── utils.js        # helpers de DOM e formatação
@@ -91,7 +69,7 @@ app_pokemon/
 ## 🧰 Stack
 
 - Frontend 100% estático: HTML, CSS e JS vanilla (sem framework, sem npm)
-- Servidor: Python 3 (`http.server`)
+- Servidor (opcional): Python 3 (`http.server`)
 - Dados: [PokéAPI](https://pokeapi.co/) — gratuita, sem cadastro, CORS habilitado
 
 Mais detalhes de arquitetura e convenções em [CLAUDE.md](./CLAUDE.md).
