@@ -11,7 +11,48 @@ Explorador de Pokémon feito em **HTML + CSS + JavaScript vanilla**, sem framewo
 - **Montagem de time**: adicione até 6 Pokémon e veja a efetividade combinada do time inteiro lado a lado
 - Cache em memória das respostas da API durante a sessão do browser
 
-## 🚀 Como rodar
+---
+
+## 📥 Nunca programou? Comece aqui
+
+Não precisa instalar nada complicado nem entender de programação. Siga os passos abaixo:
+
+### Passo 1 — Baixar o projeto
+
+1. Clique no botão verde **"Code"** no topo desta página
+2. Clique em **"Download ZIP"**
+3. Extraia (descompacte) o arquivo ZIP baixado em uma pasta no seu computador
+
+### Passo 2 — Instalar o Python (só na primeira vez)
+
+O app precisa do **Python**, um programa gratuito, para funcionar. Se você não tem certeza se já tem, pode pular para o Passo 3 — os scripts avisam se faltar algo.
+
+- Baixe em **https://www.python.org/downloads/**
+- **Importante no Windows:** na tela de instalação, marque a caixinha **"Add Python to PATH"** antes de clicar em instalar
+
+### Passo 3 — Abrir o app
+
+Dentro da pasta que você extraiu, dê **duplo-clique** no arquivo correspondente ao seu sistema:
+
+| Sistema | Arquivo |
+|---|---|
+| 🪟 Windows | `Iniciar - Windows.bat` |
+| 🍎 Mac | `Iniciar - Mac.command` |
+| 🐧 Linux | `Iniciar - Linux.sh` |
+
+Uma janela preta (terminal) vai abrir e, em seguida, o app abre sozinho no seu navegador. **Deixe essa janela aberta** enquanto estiver usando o Pokémon Explorer — fechá-la encerra o app.
+
+> **Mac:** se aparecer um aviso de segurança ("não é possível verificar o desenvolvedor"), clique com o botão direito no arquivo → **Abrir** → confirme.
+>
+> **Linux:** se o duplo-clique não funcionar, dê permissão de execução: botão direito no arquivo → Propriedades → Permissões → "Permitir executar como programa", ou rode `chmod +x "Iniciar - Linux.sh"` no terminal.
+
+### Passo 4 — Usar
+
+Pronto! Explore as gerações, veja detalhes dos Pokémon e monte seu time. Para fechar o app, é só fechar a janela do terminal.
+
+---
+
+## 🚀 Como rodar (modo manual / desenvolvedores)
 
 Não há dependências para instalar — é só subir o servidor estático incluso:
 
@@ -27,6 +68,9 @@ Depois acesse **http://localhost:1989**
 app_pokemon/
 ├── index.html          # estrutura HTML
 ├── style.css           # estilos
+├── Iniciar - Windows.bat # atalho de um clique (Windows)
+├── Iniciar - Mac.command # atalho de um clique (Mac)
+├── Iniciar - Linux.sh    # atalho de um clique (Linux)
 ├── js/
 │   ├── constants.js    # URLs da API, cores de tipos, estado global
 │   ├── utils.js        # helpers de DOM e formatação
